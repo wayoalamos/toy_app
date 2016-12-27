@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<p>Primero se enseñan los mensajes de un usuario</p>
+
+<% @his_posts.each do |m| %>
+	<%= m.content %>
+	</br>
+<% end %>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
